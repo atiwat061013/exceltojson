@@ -14,7 +14,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- <input type="file" (change)="onFileChange($event)" />
+
+    <div id="output"></div>
+    <br>
+    <div *ngIf="willDownload">
+      <a id="download"> Download JSON File </a>
+    </div> -->
+
+
+    <input type="file" (change)="onFileChange($event)"  accept=".xls,.xlsx" />
+    <ion-button (click)="onClick()" expand="block">
+      Click me
+    </ion-button>
+
+    <div>
+      <pre id="jsondata"></pre>
+    </div>
+
   </div>
 </ion-content>
